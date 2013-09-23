@@ -90,7 +90,7 @@ module CamperVan
         stream.close if stream.respond_to?('close') # EM/em-http-request gem is installed and uses .close
         stream.close_connection if stream.respond_to?('close_connection')
       end
-      # room.leave # let the timeout do it rather than being explicit!
+      room.leave # be explicit rather than letting the timeout do it!
     end
 
     # Public: replies to a WHO command with a list of users for a campfire room,
